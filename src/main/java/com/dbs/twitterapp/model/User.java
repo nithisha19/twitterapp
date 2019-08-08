@@ -22,19 +22,38 @@ public class User {
 	private int id;
 	
 	@NotBlank(message = "UserName cannot be null")
-    @Column(name = "user_name", nullable = true)
+    @Column(name = "username", nullable = true)
 	private String username;
 	
 	@NotBlank(message = "Password cannot be null")
     @Column(name = "password", nullable = true)
 	private String password;
 
-	public User(int id, @NotBlank(message = "UserName cannot be null") String username,
-			@NotBlank(message = "Password cannot be null") String password) {
+	private String email;
+	private String city;
+	private String street;
+	private String state;
+	private String zipcode;
+	
+	
+
+	public User() {
+		// TODO Auto-generated constructor stub
+	}
+
+
+
+	public User(int id,  String username, String password, String email, String city, String street,
+			String state, String zipcode) {
 		super();
 		this.id = id;
 		this.username = username;
 		this.password = password;
+		this.email = email;
+		this.city = city;
+		this.street = street;
+		this.state = state;
+		this.zipcode = zipcode;
 	}
 	
 	
